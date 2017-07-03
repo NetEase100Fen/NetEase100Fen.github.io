@@ -1295,6 +1295,10 @@ pre .javascript .function {
   color: #666;
   border-bottom: none;
 }
+.post-author {
+  text-align: center;
+  color: #999;
+}
 .page-home .post-type-quote .post-header,
 .page-post-detail .post-type-quote .post-header,
 .page-home .post-type-quote .post-tags,
@@ -1528,6 +1532,10 @@ pre .javascript .function {
 .fancybox-close:hover {
   border: none;
 }
+.post-author {
+  text-align: center;
+  color: #999;
+}
 .sidebar {
   position: fixed;
   right: 0;
@@ -1685,7 +1693,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #964ebd;
+  background: #eb942a;
 }
 .links-of-blogroll {
   font-size: 13px;
