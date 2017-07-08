@@ -87,16 +87,16 @@
 
 
 
-<meta name="description" content="初探 Headless Chrome Getting Started with Headless Chrome Automated testing with Headless Chrome初探Headless Chrome，比起PhantomJS，更贴近浏览器开发环境，且Chrome发布Headless模式后，PhantomJS作者发布通知不再维护PhantomJS项目。后面这两篇配合阅读效果">
+<meta name="description" content="1.Callbacks vs Events，作者从运行时异常的角度，来解释了回调实现的事件系统与内建的事件系统的区别。例子很简单，几分钟时间就能理解。大家可以看看regular的事件是怎样的。 2.js错误处理机制。既然提到了异常，那我们就来回顾一下错误处理机制的基础，话说真的很少在js里面做异常处理。 3.如何中断js执行？。第一个回答说的很全面，debugger、return、error、cl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端早读-20170619">
-<meta property="og:url" content="http://yoursite.com/2017/06/19/前端早读-20170617/index.html">
+<meta property="og:title" content="前端早读-20170707">
+<meta property="og:url" content="http://yoursite.com/2017/07/07/前端早读-20170707/index.html">
 <meta property="og:site_name" content="知识即性感">
-<meta property="og:description" content="初探 Headless Chrome Getting Started with Headless Chrome Automated testing with Headless Chrome初探Headless Chrome，比起PhantomJS，更贴近浏览器开发环境，且Chrome发布Headless模式后，PhantomJS作者发布通知不再维护PhantomJS项目。后面这两篇配合阅读效果">
-<meta property="og:updated_time" content="2017-06-20T16:49:30.000Z">
+<meta property="og:description" content="1.Callbacks vs Events，作者从运行时异常的角度，来解释了回调实现的事件系统与内建的事件系统的区别。例子很简单，几分钟时间就能理解。大家可以看看regular的事件是怎样的。 2.js错误处理机制。既然提到了异常，那我们就来回顾一下错误处理机制的基础，话说真的很少在js里面做异常处理。 3.如何中断js执行？。第一个回答说的很全面，debugger、return、error、cl">
+<meta property="og:updated_time" content="2017-07-08T06:13:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端早读-20170619">
-<meta name="twitter:description" content="初探 Headless Chrome Getting Started with Headless Chrome Automated testing with Headless Chrome初探Headless Chrome，比起PhantomJS，更贴近浏览器开发环境，且Chrome发布Headless模式后，PhantomJS作者发布通知不再维护PhantomJS项目。后面这两篇配合阅读效果">
+<meta name="twitter:title" content="前端早读-20170707">
+<meta name="twitter:description" content="1.Callbacks vs Events，作者从运行时异常的角度，来解释了回调实现的事件系统与内建的事件系统的区别。例子很简单，几分钟时间就能理解。大家可以看看regular的事件是怎样的。 2.js错误处理机制。既然提到了异常，那我们就来回顾一下错误处理机制的基础，话说真的很少在js里面做异常处理。 3.如何中断js执行？。第一个回答说的很全面，debugger、return、error、cl">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/19/前端早读-20170617/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/07/前端早读-20170707/"/>
 
 
 
 
 
-  <title> 前端早读-20170619 | 知识即性感 </title>
+  <title> 前端早读-20170707 | 知识即性感 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/19/前端早读-20170617/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/07/前端早读-20170707/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NetEase100Fen">
@@ -270,14 +270,14 @@
             
             
               
-                前端早读-20170619
+                前端早读-20170707
               
             
           </h1>
         
 
         
-        <div class="post-author"><i class="fa fa-user-o"></i>&nbsp;&nbsp;Jessica</div>
+        <div class="post-author"><i class="fa fa-user-o"></i>&nbsp;&nbsp;cyberstick</div>
         
 
         <div class="post-meta">
@@ -289,8 +289,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-19T00:00:00+08:00">
-                2017-06-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-07T09:37:16+08:00">
+                2017-07-07
               </time>
             
 
@@ -299,28 +299,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端早读/" itemprop="url" rel="index">
-                    <span itemprop="name">前端早读</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -347,24 +325,14 @@
       
 
       
-        <ol>
-<li><ul>
-<li><a href="https://zhuanlan.zhihu.com/p/27100187" target="_blank" rel="external">初探 Headless Chrome</a></li>
-<li><a href="https://developers.google.com/web/updates/2017/04/headless-chrome" target="_blank" rel="external">Getting Started with Headless Chrome</a></li>
-<li><a href="https://developers.google.com/web/updates/2017/06/headless-karma-mocha-chai" target="_blank" rel="external">Automated testing with Headless Chrome</a><br>初探Headless Chrome，比起PhantomJS，更贴近浏览器开发环境，且Chrome发布Headless模式后，PhantomJS作者发布通知不再维护PhantomJS项目。后面这两篇配合阅读效果更佳，分别是Headless Chrome的api以及自动化测试指南。</li>
+        <p>1.<a href="http://dean.edwards.name/weblog/2009/03/callbacks-vs-events/" target="_blank" rel="external">Callbacks vs Events</a>，作者从运行时异常的角度，来解释了回调实现的事件系统与内建的事件系统的区别。例子很简单，几分钟时间就能理解。大家可以看看regular的事件是怎样的。</p>
+<p>2.<a href="http://javascript.ruanyifeng.com/grammar/error.html" target="_blank" rel="external">js错误处理机制</a>。既然提到了异常，那我们就来回顾一下错误处理机制的基础，话说真的很少在js里面做异常处理。</p>
+<p>3.<a href="https://stackoverflow.com/questions/9298839/is-it-possible-to-stop-javascript-execution" target="_blank" rel="external">如何中断js执行？</a>。第一个回答说的很全面，debugger、return、error、clearTimeout、xhrObj.abort()…<br>大家可以试试看是否真的只要中途报了错，所有的Js都不会执行了呢？其实不是。<br>我们在开发过程应该都遇到过报了错，但是程序仍然可以执行的情况。<br>可以自己测试一下各种情况，以下提供几种思路：</p>
+<ul>
+<li>多个内嵌script</li>
+<li>多个script引入</li>
+<li>script引入与内嵌script</li>
 </ul>
-</li>
-<li><p><a href="https://segmentfault.com/a/1190000009695424" target="_blank" rel="external">使用flv.js做直播</a><br>了解一下b站开源的技术，文章比较简单，但是各方面都提到了。</p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/26445223" target="_blank" rel="external">通过 PWA 我们让新用户转化率提升了 104%</a><br>实战中得出的PWA设计经验，可以看看，扩展阅读也不错，最底部的内容可以忽略，😆</p>
-</li>
-<li><p><a href="http://web.jobbole.com/91299/" target="_blank" rel="external">2017年前端开发工具趋势</a><br>你看到了什么关键字？</p>
-</li>
-<li><p><a href="https://segmentfault.com/a/1190000009810138" target="_blank" rel="external">紧贴底部的页脚</a><br>参考下，要改掉现在的定位方式，还是需要先统一包一层结构。</p>
-</li>
-<li><p><a href="http://www.cnblogs.com/wiky/archive/2010/01/16/website-makes-browser-crash-reasons.html" target="_blank" rel="external">【总结】网站令浏览器崩溃的原因</a><br>参考检查下标签管理页面崩溃的问题。</p>
-</li>
-</ol>
 
       
     </div>
@@ -401,8 +369,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/16/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/07/05/前端早读-20170705/" rel="next" title="前端早读-20170705">
+                <i class="fa fa-chevron-left"></i> 前端早读-20170705
               </a>
             
           </div>
@@ -410,10 +378,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/21/前端早读-20170621/" rel="prev" title="前端早读-20170621">
-                前端早读-20170621 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
