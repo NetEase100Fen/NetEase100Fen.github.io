@@ -93,6 +93,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/07/2017/前端早读-20170707/index.html">
 <meta property="og:site_name" content="知识即性感">
 <meta property="og:description" content="1.Callbacks vs Events，作者从运行时异常的角度，来解释了回调实现的事件系统与内建的事件系统的区别。例子很简单，几分钟时间就能理解。大家可以看看regular的事件是怎样的。 2.js错误处理机制。既然提到了异常，那我们就来回顾一下错误处理机制的基础，话说真的很少在js里面做异常处理。 3.如何中断js执行？。第一个回答说的很全面，debugger、return、error、cl">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-26T23:37:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端早读-20170707">
@@ -337,9 +338,9 @@
       
 
       
-        <p>1.<a href="http://dean.edwards.name/weblog/2009/03/callbacks-vs-events/" target="_blank" rel="external">Callbacks vs Events</a>，作者从运行时异常的角度，来解释了回调实现的事件系统与内建的事件系统的区别。例子很简单，几分钟时间就能理解。大家可以看看regular的事件是怎样的。</p>
-<p>2.<a href="http://javascript.ruanyifeng.com/grammar/error.html" target="_blank" rel="external">js错误处理机制</a>。既然提到了异常，那我们就来回顾一下错误处理机制的基础，话说真的很少在js里面做异常处理。</p>
-<p>3.<a href="https://stackoverflow.com/questions/9298839/is-it-possible-to-stop-javascript-execution" target="_blank" rel="external">如何中断js执行？</a>。第一个回答说的很全面，debugger、return、error、clearTimeout、xhrObj.abort()…<br>大家可以试试看是否真的只要中途报了错，所有的Js都不会执行了呢？其实不是。<br>我们在开发过程应该都遇到过报了错，但是程序仍然可以执行的情况。<br>可以自己测试一下各种情况，以下提供几种思路：</p>
+        <p>1.<a href="http://dean.edwards.name/weblog/2009/03/callbacks-vs-events/" target="_blank" rel="noopener">Callbacks vs Events</a>，作者从运行时异常的角度，来解释了回调实现的事件系统与内建的事件系统的区别。例子很简单，几分钟时间就能理解。大家可以看看regular的事件是怎样的。</p>
+<p>2.<a href="http://javascript.ruanyifeng.com/grammar/error.html" target="_blank" rel="noopener">js错误处理机制</a>。既然提到了异常，那我们就来回顾一下错误处理机制的基础，话说真的很少在js里面做异常处理。</p>
+<p>3.<a href="https://stackoverflow.com/questions/9298839/is-it-possible-to-stop-javascript-execution" target="_blank" rel="noopener">如何中断js执行？</a>。第一个回答说的很全面，debugger、return、error、clearTimeout、xhrObj.abort()…<br>大家可以试试看是否真的只要中途报了错，所有的Js都不会执行了呢？其实不是。<br>我们在开发过程应该都遇到过报了错，但是程序仍然可以执行的情况。<br>可以自己测试一下各种情况，以下提供几种思路：</p>
 <ul>
 <li>多个内嵌script</li>
 <li>多个script引入</li>
