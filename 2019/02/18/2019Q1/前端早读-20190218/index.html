@@ -1,0 +1,731 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="新鲜资讯1.喜大普奔，ES2019登场ES2019终于登场了，让我们来看看这些新的特性给我们带来了什么样的改变 2.2019 前端，后端，DevOps开发者爬山路线图新的一年 新坑解惑 以图谱的方式，在新东西中找到适合自己的技术 3.京东PLUS会员项目前端性能优化实践  前端性能处理保障用户体验，看看京东是从哪几个方面处理，提升网站访问效率的吧。 深度阅读1.盘它！40篇+阿里技术经典案例，看完">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端早读-20190218">
+<meta property="og:url" content="http://yoursite.com/2019/02/18/2019Q1/前端早读-20190218/index.html">
+<meta property="og:site_name" content="知识即性感">
+<meta property="og:description" content="新鲜资讯1.喜大普奔，ES2019登场ES2019终于登场了，让我们来看看这些新的特性给我们带来了什么样的改变 2.2019 前端，后端，DevOps开发者爬山路线图新的一年 新坑解惑 以图谱的方式，在新东西中找到适合自己的技术 3.京东PLUS会员项目前端性能优化实践  前端性能处理保障用户体验，看看京东是从哪几个方面处理，提升网站访问效率的吧。 深度阅读1.盘它！40篇+阿里技术经典案例，看完">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-18T02:34:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端早读-20190218">
+<meta name="twitter:description" content="新鲜资讯1.喜大普奔，ES2019登场ES2019终于登场了，让我们来看看这些新的特性给我们带来了什么样的改变 2.2019 前端，后端，DevOps开发者爬山路线图新的一年 新坑解惑 以图谱的方式，在新东西中找到适合自己的技术 3.京东PLUS会员项目前端性能优化实践  前端性能处理保障用户体验，看看京东是从哪几个方面处理，提升网站访问效率的吧。 深度阅读1.盘它！40篇+阿里技术经典案例，看完">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/18/2019Q1/前端早读-20190218/"/>
+
+
+
+
+
+  <title> 前端早读-20190218 | 知识即性感 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">知识即性感</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/18/2019Q1/前端早读-20190218/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NetEase100Fen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="知识即性感">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                前端早读-20190218
+              
+            
+          </h1>
+        
+
+        
+        <div class="post-author"><i class="fa fa-user-o"></i>&nbsp;&nbsp;网易卡搭编程|课程</div>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-18T00:00:00+08:00">
+                2019-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端早读/" itemprop="url" rel="index">
+                    <span itemprop="name">前端早读</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/18/2019Q1/前端早读-20190218/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2019/02/18/2019Q1/前端早读-20190218/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="新鲜资讯"><a href="#新鲜资讯" class="headerlink" title="新鲜资讯"></a>新鲜资讯</h2><p>1.<a href="https://juejin.im/post/5c512592e51d4507786250b6" target="_blank" rel="noopener">喜大普奔，ES2019登场</a><br>ES2019终于登场了，让我们来看看这些新的特性给我们带来了什么样的改变</p>
+<p>2.<a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank" rel="noopener">2019 前端，后端，DevOps开发者爬山路线图</a><br>新的一年 新坑解惑 以图谱的方式，在新东西中找到适合自己的技术</p>
+<p>3.<a href="https://juejin.im/entry/5c6613ed518825629d075478" target="_blank" rel="noopener">京东PLUS会员项目前端性能优化实践</a><br>  前端性能处理保障用户体验，看看京东是从哪几个方面处理，提升网站访问效率的吧。</p>
+<h2 id="深度阅读"><a href="#深度阅读" class="headerlink" title="深度阅读"></a>深度阅读</h2><p>1.<a href="https://mp.weixin.qq.com/s/pm-6fG5egLBBNiqSzSwaTg" target="_blank" rel="noopener">盘它！40篇+阿里技术经典案例，看完必收藏</a><br>第一篇深度阅读选做了一篇论文合集，虽然文章涉及前端的部分比较少，更多的是人工智能系列的文章，但文中涉及到的论文均能看到在具体业务实践中的应用。想通过这些文章研究的角度来类比知识点的切入和再挖掘，看如何从业务开发中挖掘出来技术特性，以及更深层的计算原理。</p>
+<p>2.<a href="https://juejin.im/post/5c6a033e6fb9a04a0c2efdd7" target="_blank" rel="noopener">精读《正则 ES2018》</a><br>正则是处理字符串的强大工具，经过了2018，它的匹配能力变的更完善了</p>
+<p>3.<a href="https://juejin.im/post/5c4418006fb9a049c043545e?utm_source=aotu_io&amp;utm_medium=liteo2_web" target="_blank" rel="noopener">2019 前端性能优化年度总结 — 第一部分</a><br>非常强大的性能总结专题。我们在开发过程中不断的为系统做各种各样的优化，减少http请求、缩小资源提及、各种缓存，这的确是提高web性能的有效方法，但也存在一个问题，多长时间优化一次？优化的目标是多少？不同的页面，优化的重点在哪里？这个总结的第一部分介绍的就是我们性能优化的首要问题，优化什么。解决这个问题，就要建立一套有效的性能评估体系：合适的指标、切实的目标、性能测试以及数据收集。实时观察我们产品的性能状态，有针对的做出性能优化。</p>
+<h2 id="趣设计"><a href="#趣设计" class="headerlink" title="趣设计"></a>趣设计</h2><p>1.<a href="https://mp.weixin.qq.com/s/sjSTfFUqTXrYIyTrnkMX1g" target="_blank" rel="noopener">前端技术选型的遗憾和经验教训</a><br>从他们的选型遗憾中可以得到一些指导的东西，但有些可坑只能自己踩过才知道</p>
+<p>2.<a href="https://juejin.im/post/5c175342e51d452d3968e2da" target="_blank" rel="noopener">Behance 2019 设计趋势</a><br>整理了 2018 下半年的 Behance 上的知名作品，包含了 UI、动效、插画。​</p>
+<p>3.<a href="https://www.uisdc.com/color-matching-gps" target="_blank" rel="noopener">别再盲目配色了！为你的配色装上GPS</a><br>  前端在还原视觉稿时，对于配色总是怀有疑问，肉眼看起来差别并不大的颜色，有必要不断修改吗？</p>
+<h2 id="趣产品"><a href="#趣产品" class="headerlink" title="趣产品"></a>趣产品</h2><p>1.<a href="https://mp.weixin.qq.com/s/sY93w6xx7j_TnfRShHuzWQ" target="_blank" rel="noopener">Web 工程师需要掌握的 38 种 SEO 技巧</a><br>SEO不能再作为产品开发中的最后一环了，常记常做</p>
+<p>2.<a href="https://www.huxiu.com/article/275279.html" target="_blank" rel="noopener">年度最佳App榜单</a><br>过去一年来自apple软件和内容生态中的优秀作品。</p>
+<p>3.<a href="https://mp.weixin.qq.com/s/8IzW3HtHExkQS3GZPy2KMQ?utm_source=aotu_io&amp;utm_medium=liteo2_web" target="_blank" rel="noopener">为什么好产品都那么重视反馈机制？</a><br>  我们在做开发时，弹窗提示、hover效果、数据打点，通过各种方式为用户提供反馈或者收集用户的反馈，所有的目的都是不断提高用户体验，保证用户的留存，合理有效的反馈机制是一个好产品的基础。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/23/2019Q1/前端早读-20190123/" rel="next" title="前端早读-20190123">
+                <i class="fa fa-chevron-left"></i> 前端早读-20190123
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="hypercomments_widget"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="NetEase100Fen" />
+          <p class="site-author-name" itemprop="name">NetEase100Fen</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">203</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新鲜资讯"><span class="nav-number">1.</span> <span class="nav-text">新鲜资讯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度阅读"><span class="nav-number">2.</span> <span class="nav-text">深度阅读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#趣设计"><span class="nav-number">3.</span> <span class="nav-text">趣设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#趣产品"><span class="nav-number">4.</span> <span class="nav-text">趣产品</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NetEase100Fen</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+		<script type="text/javascript">
+		_hcwp = window._hcwp || [];
+
+		_hcwp.push({widget:"Bloggerstream", widget_id: 95658, selector:".hc-comment-count", label: "{\%COUNT%\}" });
+
+		
+		_hcwp.push({widget:"Stream", widget_id: 95658, xid: "2019/02/18/2019Q1/前端早读-20190218/"});
+		
+
+		(function() {
+		if("HC_LOAD_INIT" in window)return;
+		HC_LOAD_INIT = true;
+		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/95658/"+lang+"/widget.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hcc, s.nextSibling);
+		})();
+		</script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
