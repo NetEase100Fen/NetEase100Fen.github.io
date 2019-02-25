@@ -1,0 +1,731 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="新鲜资讯1.三个值得期待的JavaScript新特性！它们分别是：可选运算符、空值合并、管道运算符，对于又想严谨，又想要代码简洁的攻城狮们来说，应该将会是非常实用的特性了，本文将介绍它们的语法和相关链接，帮助读者及时了解它们的进度，我们将通过编写一个小型测试项目，展示如何快速上手使用这些新特性。 2.谷歌开发 Chrome Never-Slow 模式，提供更快的浏览体验谷歌一直在开发一个叫作 Ne">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端早读-20190225">
+<meta property="og:url" content="http://yoursite.com/2019/02/25/2019Q1/前端早读-20190225/index.html">
+<meta property="og:site_name" content="知识即性感">
+<meta property="og:description" content="新鲜资讯1.三个值得期待的JavaScript新特性！它们分别是：可选运算符、空值合并、管道运算符，对于又想严谨，又想要代码简洁的攻城狮们来说，应该将会是非常实用的特性了，本文将介绍它们的语法和相关链接，帮助读者及时了解它们的进度，我们将通过编写一个小型测试项目，展示如何快速上手使用这些新特性。 2.谷歌开发 Chrome Never-Slow 模式，提供更快的浏览体验谷歌一直在开发一个叫作 Ne">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-25T02:13:59.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端早读-20190225">
+<meta name="twitter:description" content="新鲜资讯1.三个值得期待的JavaScript新特性！它们分别是：可选运算符、空值合并、管道运算符，对于又想严谨，又想要代码简洁的攻城狮们来说，应该将会是非常实用的特性了，本文将介绍它们的语法和相关链接，帮助读者及时了解它们的进度，我们将通过编写一个小型测试项目，展示如何快速上手使用这些新特性。 2.谷歌开发 Chrome Never-Slow 模式，提供更快的浏览体验谷歌一直在开发一个叫作 Ne">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/25/2019Q1/前端早读-20190225/"/>
+
+
+
+
+
+  <title> 前端早读-20190225 | 知识即性感 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">知识即性感</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/25/2019Q1/前端早读-20190225/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NetEase100Fen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="知识即性感">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                前端早读-20190225
+              
+            
+          </h1>
+        
+
+        
+        <div class="post-author"><i class="fa fa-user-o"></i>&nbsp;&nbsp;网易卡搭编程|社区</div>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-25T00:00:00+08:00">
+                2019-02-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端早读/" itemprop="url" rel="index">
+                    <span itemprop="name">前端早读</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/25/2019Q1/前端早读-20190225/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2019/02/25/2019Q1/前端早读-20190225/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="新鲜资讯"><a href="#新鲜资讯" class="headerlink" title="新鲜资讯"></a>新鲜资讯</h2><p>1.<a href="https://mp.weixin.qq.com/s/aM5vlKkka8GEFSFM222fNg" target="_blank" rel="noopener">三个值得期待的JavaScript新特性！</a><br>它们分别是：可选运算符、空值合并、管道运算符，对于又想严谨，又想要代码简洁的攻城狮们来说，应该将会是非常实用的特性了，本文将介绍它们的语法和相关链接，帮助读者及时了解它们的进度，我们将通过编写一个小型测试项目，展示如何快速上手使用这些新特性。</p>
+<p>2.<a href="https://www.infoq.cn/article/CdTblsIapKBpF1-UVLjC" target="_blank" rel="noopener">谷歌开发 Chrome Never-Slow 模式，提供更快的浏览体验</a><br>谷歌一直在开发一个叫作 Never-Slow 模式的原型功能。这个原型功能被作为 Chromium 项目的一部分，旨在通过提供一致的快速浏览来改善用户体验。</p>
+<p>3.<a href="https://mp.weixin.qq.com/s/uZ4gDl7SX_gVwMIYgq06lQ" target="_blank" rel="noopener">Chrome72 嵌套 flex 布局修改，你的网站可能会发生布局错乱</a><br>Chrome72 正式版发布后，有不少网站发生了布局错乱，原因是本次发布带来了一个改变，却没有在更新日志中提及，该改变主要针对的是嵌套的flex布局。不过目前已经在2月6日发布的 Chrome72.0.3626.96 中，将这个问题还原回以前的行为了。官方的意思是为了避免这个修改给某些网站带来的不好的影响，因此预留时间给大家修改，等到Chrome73将会发布这一改变。所以为了未来更好的浏览体验，检查一下你的页面吧！</p>
+<h2 id="深度阅读"><a href="#深度阅读" class="headerlink" title="深度阅读"></a>深度阅读</h2><p>1.<a href="https://mp.weixin.qq.com/s/pqFhhb5u6w7gmUutilH5xQ" target="_blank" rel="noopener">蚂蚁金服如何把前端性能监控做到极致?</a><br>做性能优化的第一原则就是依据数据而不是凭空猜测，当我们怀疑性能有问题的时候，应该通过测试、日志、profillig来分析出哪里有问题，有的放矢，而不是凭感觉、撞运气。那么怎么样采集一个真实用户性能数据、怎么去分析这些数据、怎么把性能数据用起来都是问题点，这些也是前端性能监控要解决的事情。本文来自蚂蚁金服前端技术专家杨森在 ArchSummit 北京 2018 的分享，他将分享如何通过 Performance 相关的 API 准确的采集用户性能数据，并如何通过大数据计算加工最终产出用户性能分析产品，以及如何通过性能数据纵向衡量产品性能、发现性能瓶颈。</p>
+<p>2.<a href="https://mp.weixin.qq.com/s/ZkdYbDA5phmKxfMA_N6E9w" target="_blank" rel="noopener">如何编写高质量的函数 – 函数底层篇</a><br>天天和函数打交道，有没有想过函数出现的目的是什么？再深入想一下，函数的执行机制是什么？那么又如何编写出高质量的函数呢？有句话说的好，知己知彼，百战不殆。想要胜利，一定要非常的了解敌人。要想更轻松的编写高质量的函数，那就要去掌握在 JS 中，函数的执行机制。</p>
+<p>3.<a href="https://mp.weixin.qq.com/s/PX7b_qV6tYKnN3ecoz9Ehw" target="_blank" rel="noopener">独家！支付宝首次披露其小程序技术架构</a><br>本文主要分成四个方面来讲支付宝小程序技术：1）系统架构，关于小程序的架构，以及其中的一些关键技术；2）性能体验，讲下在性能体验这块做的几个 case；3）开发者工具，怎么更好的帮助开发者开发和管理小程序，和保障线上小程序的质量；4）多端 inside，将支付宝小程序的技术输出给集团和外部的商户，让他们具备运行小程序的能力。让我们一起来看下支付宝小程序在满足业务发展的同时，对于整体的高可用、性能优化、多端输出方面又做了哪些工作吧~</p>
+<h2 id="趣设计"><a href="#趣设计" class="headerlink" title="趣设计"></a>趣设计</h2><p>1.<a href="https://zhuanlan.zhihu.com/p/55364776" target="_blank" rel="noopener">Ant Design 情感化设计</a><br>提到情感化设计，大家想到的可能是一些登录提示、异常状态等通过插画和微交互手段提升用户体验的案例，的确能让用户会心一笑，起到锦上添花的效果，但在落地时发现三个问题：这些提升用户情感的方法比较散，不成体系；大多停留在视觉和微交互层面，对于企业级产品用户来说略显单薄，难以真正为用户带来进一步的价值和感受；无法验证设计产出对于提升用户情感的准确性和有效性。那么 Ant Design 是如何打造有其特色的情感化设计体系的呢，让我们随着本文一探究竟吧~</p>
+<p>2.<a href="https://mp.weixin.qq.com/s/6BQ-MvvZ78tugg_24EA5xA" target="_blank" rel="noopener">物流的场景化设计</a><br>一切产品都是基于场景进行设计的，想要做好产品要从研究场景出发。同时，更多的场景也代表了更多的机会，设计师要尽量避免给自己设边界。设计的价值不应该只停留在界面上，要去挖掘整个链路的服务系统，通过用户的使用场景研究人与人、人与物之间的触点，去发现更多的机会点，而这些机会点才是设计价值的体现。那么，你所做的产品又有哪些机会点呢？</p>
+<p>3.<a href="https://mp.weixin.qq.com/s/Q_nxcgb8MvFN5SqN7GldvA" target="_blank" rel="noopener">关于退出按钮，你可能不知道的设计细节</a><br>“x”图标在应用中是一个非常常见的交互暗示，可以将烦人的弹窗从内容上进行关闭。无论是模态，对话框还是弹出窗口，都是内容交互中必要的操作元素，我们只需要建立合理的退出方式就好。读完这篇文章你将会了解到：1、关闭按钮“x”的设计历史 2、“x”设计的注意事项 3、关闭按钮设计的最佳案例。</p>
+<h2 id="趣产品"><a href="#趣产品" class="headerlink" title="趣产品"></a>趣产品</h2><p>1.<a href="https://mp.weixin.qq.com/s/kSS3x7WFml21K5gR6hZe4Q" target="_blank" rel="noopener">K12教育行业的获客，留存和转化</a><br>K12教育目前划分出了搜题答疑、题库、工具、辅导等不同赛道。无论是“教育+互联网”还是“互联网+教育”，相比传统的教育培训行业变得更加开放、透明，用户行为也发生了很大的改变。任何类型的产品运营，需要首先从了解他的用户开始。作为技术，对产品的了解也有助于更好的为业务赋能。</p>
+<p>2.<a href="http://www.woshipm.com/pd/1969566.html" target="_blank" rel="noopener">调整界面引起骂声一片，微信做错了吗?</a><br>微信新版本发布之后，界面的颜色调整引起大量的讨论和吐槽。有许多用户表示不想更新，网上甚至还出现“如何退回旧版本？”的攻略。为何单单界面调整，就能引起这么多的讨伐声呢？本文从“舒适区”、“控制欲”、“共性话题”、“社交跟从”四个方面讲述了其原因。</p>
+<p>3.<a href="http://www.woshipm.com/pmd/1958795.html" target="_blank" rel="noopener">作为PM，如何快速确定产品需求列表的优先级？</a><br>你是否也曾为用户故事积压的问题苦恼过？本文介绍了一套体系方法，通过决定用户故事的优先级来解决这个问题。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/18/2019Q1/前端早读-20190218/" rel="next" title="前端早读-20190218">
+                <i class="fa fa-chevron-left"></i> 前端早读-20190218
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="hypercomments_widget"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="NetEase100Fen" />
+          <p class="site-author-name" itemprop="name">NetEase100Fen</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">204</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新鲜资讯"><span class="nav-number">1.</span> <span class="nav-text">新鲜资讯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度阅读"><span class="nav-number">2.</span> <span class="nav-text">深度阅读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#趣设计"><span class="nav-number">3.</span> <span class="nav-text">趣设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#趣产品"><span class="nav-number">4.</span> <span class="nav-text">趣产品</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NetEase100Fen</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+		<script type="text/javascript">
+		_hcwp = window._hcwp || [];
+
+		_hcwp.push({widget:"Bloggerstream", widget_id: 95658, selector:".hc-comment-count", label: "{\%COUNT%\}" });
+
+		
+		_hcwp.push({widget:"Stream", widget_id: 95658, xid: "2019/02/25/2019Q1/前端早读-20190225/"});
+		
+
+		(function() {
+		if("HC_LOAD_INIT" in window)return;
+		HC_LOAD_INIT = true;
+		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/95658/"+lang+"/widget.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hcc, s.nextSibling);
+		})();
+		</script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
